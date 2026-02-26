@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Portfolio - Morel Herval</title>
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+<script src="translations.js"></script>
+<script src="javascript.js" defer></script>
+</head>
+<body>
+  <!-- Starry background -->
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+
+  <!-- Language selector -->
+  <div class="language-selector">
+    <button class="lang-btn active" data-lang="fr" title="Français">🇫🇷</button>
+    <button class="lang-btn" data-lang="en" title="English">🇬🇧</button>
+    <button class="lang-btn" data-lang="tr" title="Türkçe">🇹🇷</button>
+  </div>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="backToTop" data-translate-title="backtotop.title" title="Retour en haut">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <!-- Navigation en haut fixe -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-btn" data-translate="nav.home">HOME</a>
+      <a href="#skills" class="nav-btn" data-translate="nav.skills">SKILLS</a>
+      <a href="#work" class="nav-btn" data-translate="nav.work">WORK</a>
+      <a href="#about" class="nav-btn" data-translate="nav.about">ABOUT</a>
+      <a href="#contact" class="nav-btn" data-translate="nav.contact">CONTACT</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Cadre glassmorphism -->
+    <div class="glass-frame" id="glassFrame">
+
+      <!-- Texte PORTFOLIO en arrière-plan -->
+      <div class="portfolio-bg">
+        <div class="name-wrap" id="nameWrap" aria-hidden="false">
+          <span class="name" id="nameText">MOREL HERVAL</span>
+        </div>
+      </div>
+
+      <!-- Photo principale -->
+      <div class="main-photo" id="mainPhoto">
+        <img src="image/Red and White Illustrated Angel New Release Album Cover (1).svg" alt="Morel Herval">
+      </div>
+
+      <!-- Portfolio text et scroll indicator -->
+      <div class="portfolio-label" id="portfolioLabel">
+        <h2 class="portfolio-text" data-translate="hero.portfolio">Portfolio</h2>
+        <div class="scroll-bar"></div>
+      </div>
+
+      <!-- Informations gauche -->
+      <div class="info-left" id="infoLeft">
+        <p class="description" data-translate="hero.description">Fullstack developer passionate about AI integration. I build intelligent web applications that combine modern technologies with artificial intelligence to create impactful solutions.⚙</p>
+        <p class="location" data-translate="hero.location">Based in ✧ Turkey</p>
+      </div>
+
+      <!-- Nom et titre droite -->
+      <div class="info-right" id="infoRight">
+        <h1 class="main-name">MOREL ✻<br>HERVAL</h1>
+        <p class="title" data-translate="hero.title">Software Developer</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Section SKILLS -->
+  <section id="skills" class="section">
+    <div class="section-container">
+      <h2 class="section-title fade-in" data-translate="skills.title">My Skills</h2>
+      <p class="section-subtitle fade-in" data-translate="skills.subtitle">Technologies & Tools I Work With</p>
+
+      <div class="skills-grid">
+        <div class="skill-card fade-in delay-1">
+          <div class="skill-header">
+            <h3 data-translate="skills.frontend">Frontend Development</h3>
+            <span class="expand-icon">▼</span>
+          </div>
+          <div class="skill-icons-scroll">
+            <div class="icons-track">
+              <span class="tech-icon">HTML5</span>
+              <span class="tech-icon">CSS3</span>
+              <span class="tech-icon">JavaScript</span>
+              <span class="tech-icon">React</span>
+              <span class="tech-icon">TypeScript</span>
+              <span class="tech-icon">Tailwind CSS</span>
+              <span class="tech-icon">Vite</span>
+              <span class="tech-icon">Shadcn-ui</span>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 90%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card fade-in delay-2">
+          <div class="skill-header">
+            <h3 data-translate="skills.backend">Backend Development</h3>
+            <span class="expand-icon">▼</span>
+          </div>
+          <div class="skill-icons-scroll">
+            <div class="icons-track">
+              <span class="tech-icon">Node.js</span>
+              <span class="tech-icon">Express</span>
+              <span class="tech-icon">C++</span>
+              <span class="tech-icon">TypeScript</span>
+              <span class="tech-icon">Python</span>
+              <span class="tech-icon">REST API</span>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 85%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card fade-in delay-3">
+          <div class="skill-header">
+            <h3 data-translate="skills.database">Databases</h3>
+            <span class="expand-icon">▼</span>
+          </div>
+          <div class="skill-icons-scroll">
+            <div class="icons-track">
+              <span class="tech-icon">Supabase</span>
+              <span class="tech-icon">PostgreSQL</span>
+              <span class="tech-icon">MySQL</span>
+              <span class="tech-icon">SQL</span>
+              <span class="tech-icon">Firebase</span>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 80%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card fade-in delay-4">
+          <div class="skill-header">
+            <h3 data-translate="skills.ai">AI & Machine Learning</h3>
+            <span class="expand-icon">▼</span>
+          </div>
+          <div class="skill-icons-scroll">
+            <div class="icons-track">
+              <span class="tech-icon">OpenAI API</span>
+              <span class="tech-icon">LLMs</span>
+              <span class="tech-icon">ChatGPT</span>
+              <span class="tech-icon">AI Integration</span>
+              <span class="tech-icon">Prompt Engineering</span>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 75%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card fade-in delay-5">
+          <div class="skill-header">
+            <h3 data-translate="skills.devops">DevOps & Tools</h3>
+            <span class="expand-icon">▼</span>
+          </div>
+          <div class="skill-icons-scroll">
+            <div class="icons-track">
+              <span class="tech-icon">VS Code</span>
+              <span class="tech-icon">Git</span>
+              <span class="tech-icon">GitHub</span>
+              <span class="tech-icon">Windows</span>
+              <span class="tech-icon">Linux</span>
+              <span class="tech-icon">Figma</span>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 70%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card fade-in delay-6">
+          <div class="skill-header">
+            <h3 data-translate="skills.design">UI/UX Design</h3>
+            <span class="expand-icon">▼</span>
+          </div>
+          <div class="skill-icons-scroll">
+            <div class="icons-track">
+              <span class="tech-icon">Figma</span>
+              <span class="tech-icon">UI Design</span>
+              <span class="tech-icon">Responsive Design</span>
+              <span class="tech-icon">Prototyping</span>
+              <span class="tech-icon">User Experience</span>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 75%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section WORK -->
+  <section id="work" class="section section-dark">
+    <div class="section-container">
+      <h2 class="section-title fade-in" data-translate="work.title">My Work</h2>
+      <p class="section-subtitle fade-in" data-translate="work.subtitle">Recent Projects & Achievements</p>
+
+      <div class="projects-grid">
+
+        <div class="project-card-wrapper scale-in delay-1">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-image">
+                <div class="project-placeholder">📝</div>
+              </div>
+              <div class="project-front-label">
+                <h3>MRL-Digitech</h3>
+                <span class="flip-hint">Survolez pour en savoir plus</span>
+              </div>
+            </div>
+            <div class="project-card-back">
+              <div class="project-content">
+                <h3>MRL-Digitech</h3>
+                <p>Blog technologique sur l'IA, la cybersécurité, l'innovation et les gadgets tech. Inclut des ressources et références utiles (GitHub, etc.).</p>
+                <div class="project-tech">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Next.js</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">Node.js</span>
+                </div>
+                <a href="#" class="project-link">En développement →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card-wrapper scale-in delay-2">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-image">
+                <img src="/image/le_projet_Mohval.png" alt="MOHVAL Shopping AI Assistant">
+              </div>
+              <div class="project-front-label">
+                <h3>MOHVAL</h3>
+                <span class="flip-hint">Survolez pour en savoir plus</span>
+              </div>
+            </div>
+            <div class="project-card-back">
+              <div class="project-content">
+                <h3>MOHVAL (Shopping AI Assistant)</h3>
+                <p>PWA de recherche intelligente d'articles (vêtements, chaussures) avec IA personnalisée selon le budget, taille, couleur et préférences de l'utilisateur.</p>
+                <div class="project-tech">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">PWA</span>
+                  <span class="tech-tag">Tailwind</span>
+                  <span class="tech-tag">Supabase</span>
+                </div>
+                <a href="#" class="project-link">En développement →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card-wrapper scale-in delay-3">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-image">
+                <img src="/image/Greenpy.png" alt="Greenpy" loading="lazy">
+              </div>
+              <div class="project-front-label">
+                <h3>Greenpy</h3>
+                <span class="flip-hint">Survolez pour en savoir plus</span>
+              </div>
+            </div>
+            <div class="project-card-back">
+              <div class="project-content">
+                <h3>Greenpy</h3>
+                <p>Plateforme web d'apprentissage Python avec interface retro OS (style Windows 98). Un professeur IA propulsé par Groq corrige les exercices et accompagne l'élève avec 39 leçons, système XP et gamification.</p>
+                <div class="project-tech">
+                  <span class="tech-tag">Flask</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">SQLite</span>
+                  <span class="tech-tag">Groq API</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+                <a href="https://github.com/morel1999/greenpy" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                  Voir sur GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section ABOUT -->
+  <section id="about" class="section">
+    <div class="section-container">
+      <h2 class="section-title fade-in" data-translate="about.title">About Me</h2>
+      <p class="section-subtitle fade-in" data-translate="about.subtitle">My Journey & Passion</p>
+
+      <div class="about-content">
+        <div class="about-text fade-in-left">
+          <div class="about-photo">
+            <img src="image/morel.png" alt="Morel Herval">
+          </div>
+
+          <p class="about-intro" data-translate="about.intro">
+            Third-year Computer Engineering student at Bilecik Şeyh Edebali University, passionate about
+            artificial intelligence, fullstack development, and innovative solutions.
+          </p>
+          <p data-translate="about.bio1">
+            Combining expertise in modern web technologies (React, TypeScript, Node.js) with AI integration (OpenAI API, LLMs),
+            I create intelligent applications that solve real-world problems. Serious and methodical, I easily adapt to new
+            environments and thrive on technological challenges and innovation.
+          </p>
+          <p data-translate="about.bio2">
+            When I'm not coding, you'll find me practicing martial arts (Qwan Ki Do), playing football,
+            or keeping up with the latest trends in technology and cybersecurity.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="highlight-number">3+</div>
+              <div class="highlight-label" data-translate="about.stat1">Years of Study</div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-number">8+</div>
+              <div class="highlight-label" data-translate="about.stat2">Academic Projects</div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-number">3</div>
+              <div class="highlight-label" data-translate="about.stat3">Languages</div>
+            </div>
+          </div>
+
+          <div class="about-languages">
+            <h4 data-translate="about.languages.title">Languages</h4>
+            <div class="language-item">
+              <span class="lang-name">French</span>
+              <span class="lang-level">Native</span>
+            </div>
+            <div class="language-item">
+              <span class="lang-name">Turkish</span>
+              <span class="lang-level">B2</span>
+            </div>
+            <div class="language-item">
+              <span class="lang-name">English</span>
+              <span class="lang-level">B1</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-timeline fade-in-right">
+          <h3 data-translate="about.journey">My Journey</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>2022 - Present</h4>
+                <p data-translate="about.education1.title">Computer Engineering Student</p>
+                <span class="timeline-place" data-translate="about.education1.place">Bilecik Şeyh Edebali University, Turkey</span>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>2020 - 2021</h4>
+                <p data-translate="about.education2.title">Baccalaureate - Series D (Scientific)</p>
+                <span class="timeline-place" data-translate="about.education2.place">Lycée Nelson Mandela, Gabon</span>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>2015 - 2016</h4>
+                <p data-translate="about.education3.title">First Cycle Certificate</p>
+                <span class="timeline-place" data-translate="about.education3.place">Lycée Paul Emane Eyeghe, Gabon</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section CONTACT -->
+  <section id="contact" class="section section-dark">
+    <div class="section-container">
+      <h2 class="section-title fade-in" data-translate="contact.title">Get In Touch</h2>
+      <p class="section-subtitle fade-in" data-translate="contact.subtitle">Let's Work Together</p>
+
+      <div class="contact-content">
+        <div class="contact-info fade-in-left">
+          <div class="contact-info-card">
+            <h3 data-translate="contact.info">Contact Information</h3>
+
+            <div class="contact-details">
+              <a href="mailto:nzebiyoomorelherval@gmail.com" class="contact-item">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                    <path d="M22 4L12 13L2 4"/>
+                  </svg>
+                </div>
+                <div class="contact-item-text">
+                  <span class="contact-label" data-translate="contact.email">Email</span>
+                  <span class="contact-value">nzebiyoomorelherval@gmail.com</span>
+                </div>
+              </a>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div class="contact-item-text">
+                  <span class="contact-label" data-translate="contact.location.title">Location</span>
+                  <span class="contact-value" data-translate="contact.location.value">Turkey</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-divider"></div>
+
+            <div class="contact-socials">
+              <span class="contact-label" data-translate="contact.social">Social</span>
+              <div class="contact-social-links">
+                <a href="https://github.com/Nzebiyoomorel" target="_blank" class="contact-social-link" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.603-3.369-1.343-3.369-1.343-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.547 2.914 1.186.092-.923.35-1.546.636-1.903-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.137 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/nzebiyoo-morel-herval-a85281248/" target="_blank" class="contact-social-link" aria-label="LinkedIn">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                  </svg>
+                </a>
+                <a href="https://www.instagram.com/nzebiyoo_morel/" target="_blank" class="contact-social-link" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.756 0 8.333.009 7.053.048 2.582.228.228 2.581.048 7.052.009 8.333 0 8.756 0 12s.009 3.667.048 4.947c.18 4.471 2.532 6.825 6.982 7.005 1.281.039 1.704.048 4.97.048s3.688-.009 4.969-.048c4.471-.18 6.824-2.532 7.004-6.981.039-1.281.048-1.704.048-4.969s-.009-3.667-.048-4.947c-.18-4.471-2.532-6.824-6.983-7.004C15.668.009 15.245 0 12 0z"/>
+                    <path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8z"/>
+                    <circle cx="18.406" cy="5.594" r="1.44"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form fade-in-right">
+          <div class="form-group">
+            <label for="name" data-translate="contact.form.name">Name</label>
+            <input type="text" id="name" name="name" data-translate-placeholder="contact.form.name.placeholder" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email" data-translate="contact.form.email">Email</label>
+            <input type="email" id="email" name="email" data-translate-placeholder="contact.form.email.placeholder" placeholder="your.email@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message" data-translate="contact.form.message">Message</label>
+            <textarea id="message" name="message" rows="5" data-translate-placeholder="contact.form.message.placeholder" placeholder="Your message..." required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">
+            <span data-translate="contact.form.submit">Send Message</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Morel Herval. <span data-translate="footer.text">Crafted with passion</span></p>
+  </footer>
+
+  <div class="curtain" id="curtain"></div>
+</body>
+</html>

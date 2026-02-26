@@ -1,0 +1,13 @@
+# Dossiers à ignorer
+document/
+image/
+node_modules/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers d'éditeur
+.vscode/
+.env
+.env.local
