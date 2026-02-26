@@ -1,6 +1,4 @@
 # Dossiers à ignorer
-document/
-image/
 node_modules/
 
 # Fichiers système
