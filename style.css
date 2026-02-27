@@ -1289,9 +1289,7 @@ body.menu-open {
 
 /* Back face */
 .project-card-back {
-  background: linear-gradient(145deg, rgba(20, 30, 40, 0.95), rgba(10, 15, 25, 0.98));
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: linear-gradient(145deg, rgb(20, 30, 40), rgb(10, 15, 25));
   transform: rotateY(180deg);
   display: flex;
   align-items: center;
