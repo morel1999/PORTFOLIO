@@ -248,6 +248,51 @@
   })();
 
   // ============================================
+  // MOBILE HAMBURGER MENU
+  // ============================================
+
+  (function mobileMenu(){
+    const hamburger = document.getElementById('hamburger');
+    const navContainer = document.getElementById('navContainer');
+    const navLinks = document.querySelectorAll('.nav-btn');
+
+    if (!hamburger || !navContainer) return;
+
+    function closeMenu() {
+      hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      navContainer.classList.remove('nav-open');
+      document.body.classList.remove('menu-open');
+    }
+
+    function toggleMenu() {
+      const isOpen = navContainer.classList.toggle('nav-open');
+      hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      document.body.classList.toggle('menu-open', isOpen);
+    }
+
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Close menu when a nav link is clicked
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (navContainer.classList.contains('nav-open') &&
+          !navContainer.contains(e.target) &&
+          e.target !== hamburger) {
+        closeMenu();
+      }
+    });
+  })();
+
+  // ============================================
   // LANGUAGE SELECTOR
   // ============================================
 
