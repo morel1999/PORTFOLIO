@@ -645,6 +645,134 @@ html,body{
   }
 }
 
+@media (max-width: 600px){
+  .glass-frame {
+    width: 95%;
+    height: 88vh;
+    border-radius: 22px;
+  }
+
+  .info-left {
+    left: 20px;
+    max-width: 160px;
+    font-size: 13px;
+  }
+
+  .info-right {
+    right: 20px;
+  }
+
+  .main-name {
+    font-size: clamp(28px, 5vw, 40px);
+  }
+
+  .main-photo {
+    width: 190px;
+    height: 280px;
+  }
+
+  .portfolio-label {
+    top: calc(50% + 160px);
+  }
+
+  .portfolio-text {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+
+  .navbar {
+    top: 20px;
+  }
+
+  .nav-container {
+    gap: 6px;
+    padding: 8px 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 90vw;
+  }
+
+  .nav-btn {
+    padding: 8px 14px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+
+  .section {
+    padding: 60px 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(32px, 7vw, 50px);
+  }
+
+  .section-subtitle {
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .skill-card {
+    padding: 20px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .project-card-wrapper {
+    height: 360px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-highlights {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .highlight-item {
+    padding: 15px 10px;
+  }
+
+  .highlight-number {
+    font-size: 28px;
+  }
+
+  .highlight-label {
+    font-size: 12px;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .contact-info-card,
+  .contact-form {
+    padding: 24px;
+  }
+
+  .language-selector {
+    padding: 6px 8px;
+    gap: 5px;
+  }
+
+  .lang-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 17px;
+  }
+}
+
 @media (max-width: 420px){
   .name{
     letter-spacing: -1px;

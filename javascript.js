@@ -212,10 +212,17 @@
       }
     }
 
-    // Détecter le scroll avec plusieurs méthodes pour compatibilité maximale
-    window.addEventListener('scroll', checkScroll, { passive: true });
-    document.addEventListener('scroll', checkScroll, { passive: true });
-    setInterval(checkScroll, 100); // Fallback si les événements ne fonctionnent pas
+    // Throttled scroll detection using requestAnimationFrame
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          checkScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
 
     // Vérifier la position au chargement
     checkScroll();
