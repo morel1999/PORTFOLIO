@@ -13,6 +13,8 @@ const translations = {
     'hero.location': 'Basé en ✧ Turquie',
     'hero.title': 'Développeur Logiciel',
     'hero.portfolio': 'Portfolio',
+    'hero.status': 'Disponible',
+    'hero.coords': '39.6° N · TURQUIE',
 
     // Skills section
     'skills.title': 'Mes Compétences',
@@ -40,7 +42,7 @@ const translations = {
     // About section
     'about.title': 'À Propos',
     'about.subtitle': 'Mon Parcours et Ma Passion',
-    'about.intro': "Étudiant en troisième année d'ingénierie informatique à l'Université Bilecik Şeyh Edebali, passionné par l'analyse de données, le développement logiciel et l'optimisation des processus.",
+    'about.intro': "Étudiant en ingénierie informatique à l'Université Bilecik Şeyh Edebali, passionné par l'analyse de données, le développement logiciel et l'optimisation des processus.",
     'about.bio1': "Sérieux et méthodique, je m'adapte facilement aux nouveaux environnements et j'apprécie le travail en équipe pour résoudre des défis techniques et organisationnels. Toujours à la recherche de nouvelles compétences, je suis motivé par les défis technologiques et l'innovation.",
     'about.bio2': "Quand je ne code pas, vous me trouverez en train de pratiquer les arts martiaux (Qwan Ki Do), de jouer au football ou de me tenir au courant des dernières tendances en technologie et cybersécurité.",
     'about.stat1': 'Années d\'Études',
@@ -91,6 +93,8 @@ const translations = {
     'hero.location': 'Based in ✧ Turkey',
     'hero.title': 'Software Developer',
     'hero.portfolio': 'Portfolio',
+    'hero.status': 'Available for work',
+    'hero.coords': '39.6° N · TURKEY',
 
     // Skills section
     'skills.title': 'My Skills',
@@ -118,7 +122,7 @@ const translations = {
     // About section
     'about.title': 'About Me',
     'about.subtitle': 'My Journey & Passion',
-    'about.intro': "Third-year Computer Engineering student at Bilecik Şeyh Edebali University, passionate about data analysis, software development, and process optimization.",
+    'about.intro': "Computer Engineering student at Bilecik Şeyh Edebali University, passionate about data analysis, software development, and process optimization.",
     'about.bio1': "Serious and methodical, I easily adapt to new environments and enjoy teamwork to solve technical and organizational challenges. Always seeking new skills, I am motivated by technological challenges and innovation.",
     'about.bio2': "When I'm not coding, you'll find me practicing martial arts (Qwan Ki Do), playing football, or keeping up with the latest trends in technology and cybersecurity.",
     'about.stat1': 'Years of Study',
@@ -169,6 +173,8 @@ const translations = {
     'hero.location': 'Bulunduğum yer ✧ Türkiye',
     'hero.title': 'Yazılım Geliştirici',
     'hero.portfolio': 'Portföy',
+    'hero.status': 'Müsait',
+    'hero.coords': '39.6° K · TÜRKİYE',
 
     // Skills section
     'skills.title': 'Yeteneklerim',
@@ -196,7 +202,7 @@ const translations = {
     // About section
     'about.title': 'Hakkımda',
     'about.subtitle': 'Yolculuğum ve Tutkum',
-    'about.intro': "Bilecik Şeyh Edebali Üniversitesi'nde Bilgisayar Mühendisliği üçüncü sınıf öğrencisiyim. Veri analizi, yazılım geliştirme ve süreç optimizasyonu konularında tutkuluyum.",
+    'about.intro': "Bilecik Şeyh Edebali Üniversitesi'nde Bilgisayar Mühendisliği öğrenciyim. Veri analizi, yazılım geliştirme ve süreç optimizasyonu konularında tutkuluyum.",
     'about.bio1': "Ciddi ve metodik olarak, yeni ortamlara kolayca uyum sağlıyorum ve teknik ve organizasyonel zorlukları çözmek için ekip çalışmasından keyif alıyorum. Her zaman yeni beceriler arayan biri olarak, teknolojik zorluklar ve yeniliklerle motive oluyorum.",
     'about.bio2': "Kod yazmadığım zamanlarda beni dövüş sanatları (Qwan Ki Do) yaparken, futbol oynarken veya teknoloji ve siber güvenlik alanındaki en son trendleri takip ederken bulabilirsiniz.",
     'about.stat1': 'Yıllık Eğitim',
