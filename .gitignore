@@ -9,3 +9,4 @@ Thumbs.db
 .vscode/
 .env
 .env.local
+.gstack/

@@ -154,35 +154,96 @@
   })();
 
   // ============================================
-  // PROJECT CARDS FLIP (touch support)
+  // NAV SCROLLSPY — highlight the section in view
   // ============================================
 
-  (function projectCardsFlip(){
-    const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
-    if (!isTouchDevice) return;
+  (function navScrollspy(){
+    const links = Array.from(document.querySelectorAll('.nav-btn[href^="#"]'));
+    if (!links.length || !('IntersectionObserver' in window)) return;
 
-    const cards = document.querySelectorAll('.project-card-wrapper');
-    cards.forEach(card => {
-      card.addEventListener('click', function() {
-        // Close other open cards
-        cards.forEach(c => { if (c !== card) c.classList.remove('flipped'); });
-        this.classList.toggle('flipped');
+    const byId = new Map();
+    links.forEach(link => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) byId.set(target.id, link);
+    });
+
+    let current = null;
+    const setActive = (id) => {
+      if (id === current) return;
+      current = id;
+      links.forEach(l => l.classList.remove('active'));
+      const link = byId.get(id);
+      if (link) link.classList.add('active');
+    };
+
+    // Trigger when a section crosses the upper third of the viewport
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) setActive(entry.target.id);
       });
+    }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+
+    byId.forEach((_, id) => {
+      const el = document.getElementById(id);
+      if (el) spy.observe(el);
     });
   })();
 
   // ============================================
-  // SKILL CARDS EXPAND/COLLAPSE
+  // SKILL CARDS EXPAND/COLLAPSE (mouse + keyboard)
   // ============================================
 
   (function skillCardsToggle(){
     const skillCards = document.querySelectorAll('.skill-card');
 
+    function toggle(card) {
+      const expanded = card.classList.toggle('expanded');
+      card.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    }
+
     skillCards.forEach(card => {
-      card.addEventListener('click', function() {
-        // Toggle la classe expanded
-        this.classList.toggle('expanded');
+      card.addEventListener('click', function() { toggle(this); });
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggle(this);
+        }
       });
+    });
+  })();
+
+  // ============================================
+  // CONTACT FORM — no backend: open a pre-filled mail
+  // ============================================
+
+  (function contactForm(){
+    const form = document.getElementById('contactForm');
+    const note = document.getElementById('formNote');
+    if (!form) return;
+
+    const TO = 'nzebiyoomorelherval@gmail.com';
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+
+      const lang = document.documentElement.lang || 'fr';
+      const t = (typeof translations !== 'undefined' && translations[lang]) ? translations[lang] : {};
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+
+      const subject = (t['contact.form.subject'] || 'Contact') + ' — ' + name;
+      const body = message + '\n\n— ' + name + ' <' + email + '>';
+
+      window.location.href = 'mailto:' + TO +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+
+      if (note) {
+        note.textContent = t['contact.form.sent'] || note.textContent;
+        note.classList.add('is-sent');
+      }
     });
   })();
 
@@ -262,14 +323,14 @@
       hamburger.classList.remove('active');
       hamburger.setAttribute('aria-expanded', 'false');
       navContainer.classList.remove('nav-open');
-      document.body.classList.remove('menu-open');
+      document.documentElement.classList.remove('menu-open');
     }
 
     function toggleMenu() {
       const isOpen = navContainer.classList.toggle('nav-open');
       hamburger.classList.toggle('active');
       hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      document.body.classList.toggle('menu-open', isOpen);
+      document.documentElement.classList.toggle('menu-open', isOpen);
     }
 
     hamburger.addEventListener('click', function(e) {
@@ -329,10 +390,12 @@
         const key = element.getAttribute('data-translate-title');
         if (trans[key]) {
           element.title = trans[key];
+          if (element.hasAttribute('aria-label')) element.setAttribute('aria-label', trans[key]);
         }
       });
 
-      // Update HTML lang attribute
+      // Document title + HTML lang attribute
+      if (trans['meta.title']) document.title = trans['meta.title'];
       document.documentElement.lang = lang;
 
       // Store preference
